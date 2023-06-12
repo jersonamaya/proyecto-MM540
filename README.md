@@ -1,4 +1,4 @@
-# proyecto-
+# proyecto-MM540
 El proyecto consiste en el desarrollo de un sistema web de almacenamiento de fotografías que incluye diversas herramientas de procesamiento de imágenes. Una de las funcionalidades destacadas es la auto-clasificación de las fotografías de acuerdo al rostro de las personas presentes en ellas.
 El sistema permitirá a los usuarios cargar sus fotografías en la plataforma, ya sea a través de una interfaz web o mediante la sincronización con aplicaciones móviles. Una vez cargadas, el sistema utilizará algoritmos de reconocimiento facial para identificar y reconocer los rostros en cada fotografía.
 La funcionalidad de auto-clasificación se basa en estos algoritmos de reconocimiento facial. 
