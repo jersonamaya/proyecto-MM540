@@ -5,12 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto de programacion comercial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
+
 <body>
-    
-    <h1>programacion comercial</h1>
-    <p style="color: rgb(117, 18, 34);"> nombre:jerson ricardo lopez amaya <br/></p>
-    <p style="color: rgb(169, 27, 41);" >numero de cuenta : 20172030501</p>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#"> inicio</a>
+            <a href="#">subir</a>
+            <a href="#">servicio</a>
+            <a href="#">contacto</a>
+        </nav>
+        <form action="#" class="buscar">
+            <input type="text" placeholder="buscar....">
+            <button type="submit" ><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"> <i class='bx bxs-invader'></i>
+                fot8-bit</h2>
+                <div class="text-sci">
+                    <h2>Bienvenidos!<br><span>a nuestro sitio web.</span></span></h2>
+                    <p>Donde podras almacenar  editar y clasificar las imagines segun el  rostro de la persona.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-telegram'></i></a>
+                    </div>
+                </div>
+        </div>
+
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form action="#">
+                    <h2>iniciar sesión</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxl-gmail'></i></span>
+                        <input type="email" required>
+                        <label >Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" required>
+                        <label >Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label ><input
+                         type="checkbox">recordar 
+                        </label>
+                        <a href="#">olvido la password ?
+
+                        </a>
+                    </div>
+                    <button type="submit" class="btn" >iniciar sesión</button>
+                      <div class="login-register">
+                         <p>no tienes una cuenta?<a href="#" class="register-link">registrarse</a>
+                        </p>
+                     </div>
+                </form>
+
+            </div>
+
+            <div class="form-box register">
+                <form action="#">
+                    <h2>iniciar sesión</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" required>
+                        <label >nombre</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="email" required>
+                        <label >Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" required>
+                        <label >Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label ><input
+                         type="checkbox">acepto los términos y condiciones 
+                        </label>
+                        
+                        
+                    </div>
+                    <button type="submit" class="btn" >iniciar sesión</button>
+                    <div class="login-register">
+                        <p>no tienes una cuenta?<a href="#" class="login-link">iniciar secion</a></p>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
