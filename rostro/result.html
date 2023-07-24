@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de reconocimiento facial</title>
+</head>
+<body>
+    <h1>Resultados de reconocimiento facial</h1>
+    {{range $index, $label := .}}
+    <img src="/faces/face_{{inc $index}}.jpg" alt="{{$label}}">
+    <label>{{$label}}</label>
+    <br>
+    {{end}}
+</body>
+</html>
+
