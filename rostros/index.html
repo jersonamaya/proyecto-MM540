@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reconocimiento facial</title>
+</head>
+<body>
+    <h1>Reconocimiento facial</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/jpeg"> <!-- Solo acepta imágenes JPEG -->
+        <input type="submit" value="Enviar imagen">
+    </form>
+
+    <div id="resultContainer"></div>
+
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch("/upload", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("resultContainer").innerHTML = data;
+                document.getElementById("resultButton").style.display = "inline"; // Mostrar el botón de ver resultados
+            })
+            .catch(error => {
+                console.error("Error al enviar la imagen:", error);
+            });
+        });
+
+        function showResults() {
+            window.location.href = "/result";
+        }
+    </script>
+
+    <button id="resultButton" style="display:none" onclick="showResults()">Ver resultados</button>
+</body>
+</html>
