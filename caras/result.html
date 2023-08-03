@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de reconocimiento facial</title>
+</head>
+<body>
+    <h1>Resultados de reconocimiento facial</h1>
+    {{range $index, $label := .}}
+    <img src="/faces_detected/{{.}}" alt="{{$label}}">
+    <label>{{$label}}</label>
+    <br>
+    <!-- Mostrar el botón para ver la foto original -->
+    <a href="/original_image?face={{.}}">Ver foto original</a>
+    <br>
+    {{end}}
+</body>
+</html>
+
