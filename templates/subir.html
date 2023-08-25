@@ -44,15 +44,13 @@
         </header>
         <section class="contener">
             <div class="centrado">
-                <h1>Subir imagen y reconocimiento facial</h1>
-                <form id="upload-form" enctype="multipart/form-data">
-                    <input type="file" name="image" accept="image/jpg" onchange="showSelectedImage(event)">
+                <h1>Subir Imagen</h1>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" onchange="showSelectedImage(event)">
                     <br>
-                    <input type="submit" value="Enviar imagen">
+                    <input type="submit" value="Cargar imagen">
                 </form>
                 <br>
-
-           
               
                 <a href="/result">Ver Resultados</a>
                 <!-- Agrega esto en tu archivo HTML donde deseas mostrar la imagen -->
@@ -63,18 +61,26 @@
        <div class="inicio1">
            <a href="index.html" class="clicc">atras</a>
        </div>
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
        <script>
-        function showSelectedImage(event) {
-            const previewContainer = document.getElementById('image-container');
-            const image = document.createElement('img');
-            image.src = URL.createObjectURL(event.target.files[0]);
-            image.alt = 'Vista previa de la imagen';
-            image.style.maxWidth = '50%';
-            previewContainer.innerHTML = ''; // Limpiar el contenedor previo
-            previewContainer.appendChild(image);
-        }
+        const uploadForm = document.getElementById("uploadForm");
+
+        uploadForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(uploadForm);
+            try {
+                const response = await axios.post("/upload", formData);
+                if (response.status === 200) {
+                    console.log("Imagen subida con éxito.");
+                } else {
+                    console.error("Error al subir la imagen.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
     </script>
-       
 <script src="app.js"></script>
 </body>
 </html>
